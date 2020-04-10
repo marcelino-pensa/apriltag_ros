@@ -1,8 +1,12 @@
 <launch>
+
+  <!-- Rectify images -->
+  <include file="$(find vision_to_mavros)/launch/t265_fisheye_undistort_15hz.launch" />
+
   <arg name="launch_prefix" default="" /> <!-- set to value="gdbserver localhost:10000" for remote debugging -->
   <arg name="node_namespace" default="apriltag_ros_continuous_node" />
-  <arg name="camera_name" default="/camera/fisheye2/rect" />
-  <arg name="camera_frame" default="camera_fisheye2_optical_frame" />
+  <arg name="camera_name" default="/camera/fisheye1/rect" />
+  <arg name="camera_frame" default="camera_fisheye1_optical_frame" />
   <arg name="image_topic" default="image" />
 
   <!-- Set parameters -->
